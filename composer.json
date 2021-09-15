@@ -1,0 +1,31 @@
+{
+    "name": "hkaghazi/irancities",
+    "description": "Mini library for access name of iran's cities",
+    "type": "library",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hafez Kaghazi",
+            "email": "smart.hafez@live.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "HKaghazi\\IranCities\\IranCitiesServiceProvider"
+            ],
+            "aliases": {
+                "Cities": "HKaghazi\\IranCities\\IranCitiesFacade"
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "HKaghazi\\IranCities\\": "src/"
+        }
+    }
+}
