@@ -28,6 +28,11 @@
             "HKaghazi\\IranCities\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "HKaghazi\\IranCities\\Test\\": "tests/"
+        }
+    },
     "require-dev": {
         "orchestra/testbench": "6.x-dev"
     }
