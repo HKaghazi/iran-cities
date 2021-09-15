@@ -27,5 +27,8 @@
         "psr-4": {
             "HKaghazi\\IranCities\\": "src/"
         }
+    },
+    "require-dev": {
+        "orchestra/testbench": "6.x-dev"
     }
 }
