@@ -14,7 +14,7 @@ class IranCitiesServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton('Cities', function ($app) {
-            return new IranCities();
+            return new \HKaghazi\IranCities\IranCities();
         });
         $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
         $this->publishes([

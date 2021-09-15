@@ -2,10 +2,9 @@
 
 namespace HKaghazi\IranCities;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class IranCities extends Controller
+class IranCities
 {
 
     public function getProvinces()
@@ -18,7 +17,7 @@ class IranCities extends Controller
         return $province;
     }
 
-    public static function getProvinceFromCSV()
+    public function getProvinceFromCSV()
     {
         $provinces = [];
         // read from file
@@ -38,7 +37,7 @@ class IranCities extends Controller
         return $provinces;
     }
 
-    public static function getCountiesFromCSV()
+    public function getCountiesFromCSV()
     {
         $counties = [];
         // read from file
@@ -60,7 +59,7 @@ class IranCities extends Controller
         return $counties;
     }
 
-    public static function getCitiesFromCSV()
+    public function getCitiesFromCSV()
     {
         $cities = [];
         // read from file
