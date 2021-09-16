@@ -12,9 +12,13 @@ class IranCities
         return Province::all();
     }
 
-    public function getCitiesByProvinceId(Request $request, Province $province)
+    public function getCitiesByProvinceId(Request $request, $province)
     {
-        return $province;
+        if (!$province) {
+            return [];
+        }
+        $province = Province::with("cities")->find($province);
+        return $province->cities;
     }
 
     public function getProvinceFromCSV()

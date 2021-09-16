@@ -16,11 +16,16 @@ class IranCitiesServiceProvider extends ServiceProvider
         $this->app->singleton('Cities', function ($app) {
             return new \HKaghazi\IranCities\IranCities();
         });
+
         $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
+
+
         $this->publishes([
             __DIR__ . '/../database/seeders' => base_path('database/seeders')
         ], 'iran-cities-seeders');
-        $this->loadRoutesFrom(__DIR__ . '/routes.php');
+
+
+        $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
     }
 
     /**
